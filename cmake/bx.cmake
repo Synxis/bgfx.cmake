@@ -37,6 +37,9 @@ endif()
 # Add include directory of bx
 target_include_directories( bx PUBLIC ${BX_DIR}/include )
 
+# Add header-only externals
+target_include_directories( bx PRIVATE ${BX_DIR}/3rdparty )
+
 # Build system specific configurations
 if( MSVC )
 	target_include_directories( bx PUBLIC ${BX_DIR}/include/compat/msvc )
